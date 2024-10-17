@@ -26,6 +26,15 @@ struct DetailView: View {
                     .clipShape(.capsule)
                     .offset(x: -5, y: -5)
             }
+            Text(book.author)
+                .font(.title)
+                .foregroundStyle(.secondary)
+            
+            Text(book.review)
+                .padding()
+            
+            RatingView(rating: .constant(book.rating))
+                .font(.largeTitle)
         }
         .navigationTitle(book.title)
         .navigationBarTitleDisplayMode(.inline)
