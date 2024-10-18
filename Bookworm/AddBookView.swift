@@ -30,6 +30,7 @@ struct AddBookView: View {
                         }
                     }
                 }
+                
 
                 Section("Write a review") {
                     TextEditor(text: $review)
@@ -49,6 +50,7 @@ struct AddBookView: View {
                         dismiss()
                     }
                 }
+                .disabled(title.isEmpty || author.isEmpty || review.isEmpty)
             }
             .navigationTitle("Add Book")
         }
