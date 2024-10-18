@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct DetailView: View {
+
     let book: Book
     var body: some View {
         ScrollView {
